@@ -1,0 +1,690 @@
+/* font family*/
+@font-face {
+  font-family: "Abel";
+  src: url("../fonts/Abel/Abel-Regular.ttf");
+}
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+html {
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+  font-size: 10px;
+  color: white;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+input,
+button,
+submit {
+  border: none;
+}
+button {
+  border-radius: 1.2rem;
+  padding: 1rem 1.2rem;
+  font-size: 1.2rem;
+  background: none;
+  cursor: pointer;
+  transition: all 0.65s ease-in;
+  box-shadow: inset 0 0 0 0 var(--yellow-bgc);
+}
+button:hover {
+  box-shadow: inset 100vw 0 0 0 var(--yellow-bgc);
+}
+::placeholder {
+  color: var(--black-tc);
+  text-transform: capitalize;
+}
+/*
+ * css color variables
+ * */
+:root {
+  --yellow-bgc: #ffda00;
+  --yellow-tc: #ffdb00;
+  --black-bgc: #17191e;
+  --black-tc: #181a1f;
+  --white-tc: #ffffff;
+}
+.wrapper {
+  width: 100%;
+  overflow: hidden;
+}
+.inner-container {
+  width: 80%;
+  margin: 0 auto;
+}
+/*header part */
+.header {
+  background-color: var(--black-bgc);
+  position: relative;
+  overflow: hidden;
+}
+.navbar-title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 1rem 0;
+}
+.daiot-logo {
+  width: 8rem;
+}
+.navbar {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  right: -100%;
+  background-color: var(--black-bgc);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  color: var(--yellow-tc);
+  transition: all 0.65s ease-in-out;
+}
+.navbar:after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: inherit;
+  filter: blur(3px);
+  z-index: -1;
+}
+.navbar a {
+  font-size: 2rem;
+  text-transform: capitalize;
+}
+.navbar a:hover {
+  border-bottom: 2px solid var(--yellow-bgc);
+}
+.menu-btn {
+  padding: 1rem;
+  background-color: var(--yellow-bgc);
+  cursor: pointer;
+  color: var(--black-tc);
+}
+.close-btn {
+  cursor: pointer;
+}
+.show-navbar {
+  right: 0 !important;
+}
+/*main*/
+.main {
+  background-color: var(--black-bgc);
+  padding: 2rem 0;
+}
+.main span {
+  color: var(--yellow-tc);
+  font-size: 15vw;
+  text-transform: uppercase;
+  line-height: 7.5rem;
+  margin: 3rem 0;
+  display: inline-block;
+  letter-spacing: 1.2rem;
+}
+.main p {
+  font-size: 1.4rem;
+  text-align: justify;
+  font-stretch: narrower;
+}
+.main button {
+  margin: 2rem 0;
+  border: 1px solid var(--yellow-bgc);
+  color: var(--white-tc);
+  text-transform: uppercase;
+  letter-spacing: 0.6rem;
+}
+.main button:hover {
+  color: var(--black-tc);
+}
+/*detail*/
+.detail {
+  background-color: var(--yellow-bgc);
+  color: var(--black-tc);
+  padding: 5rem 0;
+}
+.detail p {
+  font-size: 1.5rem;
+  text-align: center;
+  letter-spacing: 1.5px;
+}
+/*services*/
+.services {
+  background-color: var(--white-tc);
+  text-align: center;
+  padding: 5rem 0;
+}
+.services ul {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
+.services img {
+  background-color: var(--yellow-bgc);
+  padding: 1.2rem;
+}
+.services span {
+  color: var(--yellow-tc);
+  text-transform: uppercase;
+  font-size: 3rem;
+  font-weight: 400;
+  margin: 2rem 0;
+  display: block;
+  letter-spacing: 6px;
+}
+.services p {
+  color: var(--black-tc);
+  font-size: 1.4rem;
+  text-align: justify;
+  letter-spacing: 1px;
+}
+.services button {
+  color: var(--black-tc);
+  border: 2px solid var(--yellow-bgc);
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  padding-left: 4.5rem;
+  padding-right: 4.5rem;
+  margin: 5rem 0 0;
+}
+/*counter*/
+.counter {
+  background-color: var(--black-bgc);
+  text-align: center;
+  padding: 5rem 0;
+}
+.counter ul {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
+.count {
+  font-size: 5rem;
+}
+.counter img {
+  width: 4.8rem;
+  height: 4.4rem;
+}
+.counter span {
+  margin-top: 2rem;
+  display: block;
+}
+.count ~ span {
+  font-size: 1.4rem;
+  color: var(--yellow-tc);
+  letter-spacing: 0.14rem;
+  text-transform: uppercase;
+}
+/*experience*/
+.experience {
+  background-color: var(--white-tc);
+  padding: 5rem 0;
+}
+.experience span {
+  font-size: 4rem;
+  color: var(--yellow-tc);
+  text-transform: uppercase;
+  letter-spacing: 0.12rem;
+}
+.experience p {
+  margin: 2rem 0;
+  font-size: 1.4rem;
+  color: var(--black-tc);
+}
+.experience ul {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  align-items: center;
+  margin: 5rem 0 2rem;
+}
+.experience button {
+  overflow: hidden;
+  color: var(--black-tc);
+  border: 2px solid var(--yellow-bgc);
+  border-radius: 2px;
+  text-transform: capitalize;
+  letter-spacing: 0.12rem;
+  width: 40vw;
+}
+/*work*/
+.work {
+  background-color: var(--black-bgc);
+}
+.work ul {
+  display: grid;
+  padding: 5rem 0;
+  grid-row-gap: 5rem;
+}
+.work li {
+  height: 30rem;
+  border: 1px solid white;
+  overflow: hidden;
+}
+.work img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.work-detail {
+  background: linear-gradient(rgba(255, 219, 0, 0.8), rgba(255, 219, 0, 0.5)),
+    url("../images/work-2.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: scroll;
+  padding: 2rem;
+}
+.work-detail span {
+  color: var(--black-tc);
+  font-size: 2.2rem;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+  display: inline-block;
+}
+.work-detail p {
+  font-size: 1.4rem;
+  text-shadow: 0.5px 0.7px var(--black-tc);
+  letter-spacing: 1.2px;
+  margin-bottom: 2rem;
+}
+.work-detail button {
+  border-radius: 2px;
+  border: 1px solid var(--white-tc);
+  box-shadow: inset 0 0 0 0 var(--black-bgc);
+  padding: 1rem 2rem;
+  text-transform: capitalize;
+}
+.work-detail button:hover {
+  box-shadow: inset 100vw 0 0 0 var(--black-bgc);
+  color: var(--white-tc);
+  border: 1px solid var(--black-bgc);
+}
+/*projects*/
+.projects {
+  background-color: var(--white-tc);
+  text-align: center;
+  height: 30vh;
+  position: relative;
+}
+.projects button {
+  border: 2px solid var(--yellow-bgc);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  padding: 1.5rem 2rem;
+}
+/*clients*/
+.clients {
+  background-color: var(--black-bgc);
+  padding: 5rem 0;
+}
+.clients .inner-container {
+  overflow: hidden;
+}
+.clients span {
+  color: var(--yellow-tc);
+  text-transform: uppercase;
+  font-size: 4rem;
+  letter-spacing: 1.2px;
+}
+.clients p {
+  font-size: 1.4rem;
+}
+.carousel {
+  position: relative;
+  height: 20vh;
+  transition: transform 250ms ease-in-out;
+}
+.slider {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+}
+.slider ul {
+  display: flex;
+  gap: 2.5rem;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+.slider img {
+  width: 15vw;
+}
+.nav-indicator {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-evenly;
+  height: 5rem;
+  align-items: center;
+}
+.nav-indicator .dots {
+  content: "";
+  width: 1rem;
+  height: 1rem;
+  background-color: var(--white-tc);
+  cursor: pointer;
+  box-shadow: 0px 0px 0.8rem 1px var(--white-tc);
+}
+.active {
+  background-color: var(--yellow-tc) !important;
+  box-shadow: 0px 0px 0.8rem 1px var(--yellow-bgc);
+}
+/*contact*/
+.contact {
+  padding: 5rem 0;
+}
+.contact span {
+  display: inline-block;
+  font-size: 3rem;
+  text-transform: uppercase;
+  color: var(--yellow-tc);
+  margin-top: 2rem;
+}
+.contact p {
+  margin: 2rem 0;
+  color: var(--black-tc);
+  font-size: 1.4rem;
+  letter-spacing: 1.2px;
+}
+.contact form {
+  display: grid;
+  gap: 3rem;
+  align-items: center;
+  color: var(--black-tc);
+  justify-items: center;
+}
+form input {
+  border: 2px solid;
+  width: 80%;
+  border-color: var(--black-bgc);
+  padding: 1rem 1.2rem;
+  font-size: 1.4rem;
+}
+form input:focus {
+  box-shadow: 1px 1px 2rem 1px var(--yellow-bgc);
+}
+form textarea {
+  font-size: 1.4rem;
+  border: 2px solid;
+  width: 80%;
+  border-color: var(--black-bgc);
+  padding: 1rem 1.2rem;
+}
+form textarea:focus {
+  box-shadow: 1px 1px 2rem 1px var(--yellow-bgc);
+}
+form button {
+  border: 1px solid;
+  border-color: var(--yellow-bgc);
+  text-transform: uppercase;
+  padding: 1.2rem 5rem;
+  letter-spacing: 1.2px;
+}
+/*about*/
+.about {
+  background-color: var(--yellow-bgc);
+  color: var(--black-tc);
+  padding: 5rem 0;
+}
+.about li {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+.about img {
+  width: 5rem;
+  height: 5rem;
+  background-color: var(--black-bgc);
+  padding: 1.2rem;
+}
+.about span {
+  font-size: 1.4rem;
+  display: inline-block;
+}
+/*footer*/
+.footer {
+  background-color: var(--black-bgc);
+  text-align: center;
+  padding: 5rem 0;
+}
+.footer span {
+  font-size: 2rem;
+}
+.footer span > a {
+  color: var(--yellow-tc);
+}
+.footer a {
+  cursor: poiner;
+  transition: 1s;
+}
+.footer ul {
+  padding: 2rem 0 0;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+/*
+ * media queries for tablet and small laptop screen
+ * */
+@media screen and (min-width: 768px) {
+  .header {
+    position: initial;
+    padding: 2rem 0;
+    overflow: visible;
+  }
+  .header .inner-container {
+    position: relative;
+  }
+  .navbar {
+    position: absolute;
+    top: 7rem;
+    background-color: var(--yellow-bgc);
+    color: var(--black-tc);
+    height: 5rem;
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
+    align-content: center;
+    z-index: 99999;
+    right: -120%;
+    border-radius: 2rem;
+  }
+  .navbar a:hover {
+    border-color: var(--black-bgc);
+  }
+  .main {
+  }
+  .main span {
+    line-height: 15rem;
+  }
+  .main p {
+    font-size: 1.8rem;
+  }
+  .main button {
+    margin: 5rem 0;
+  }
+  .close-btn {
+    line-height: 1.5;
+  }
+  .detail {
+    padding: 10rem 0;
+  }
+  .services {
+    padding: 10rem 0;
+  }
+  .services ul {
+    flex-direction: row;
+  }
+  .services li {
+    text-align: left;
+  }
+  .counter {
+    padding: 10rem 0;
+  }
+  .counter ul {
+    flex-direction: row;
+    justify-content: center;
+    flex-basis: 100%;
+  }
+  .experience {
+    padding: 10rem 0;
+  }
+  .experience ul {
+    flex-direction: row;
+    justify-content: center;
+  }
+  .experience button {
+    width: auto;
+  }
+  .work ul {
+    grid-row-gap: 0;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+  }
+  .work li {
+    height: 35rem;
+  }
+  .about ul {
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+  }
+  .about li {
+    flex-direction: row;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .slider ul {
+    justify-content: space-around;
+  }
+  .slider img {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 1366px) {
+  button {
+    font-size: 1.4rem;
+  }
+  .main span {
+    font-size: 18rem;
+    line-height: 20rem;
+  }
+  .main p {
+    width: 60%;
+    line-height: 3.8rem;
+  }
+  .detail p {
+    font-size: 1.8rem;
+  }
+  .services span {
+    font-size: 5rem;
+  }
+  .services p {
+    font-size: 1.8rem;
+  }
+  .counter ul {
+    justify-content: space-evenly;
+  }
+  .count {
+    font-size: 8rem;
+  }
+  .count ~ span {
+    font-size: 1.8rem;
+  }
+  .experience span {
+    font-size: 8rem;
+  }
+  .experience p {
+    font-size: 1.8rem;
+  }
+  .work ul {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+  .work li {
+    height: auto;
+  }
+  .work-box-1 {
+    grid-row: 1/3;
+  }
+  .work-box-2 {
+    grid-column: 2/4;
+  }
+  .work-box-3 {
+    grid-column: 4/5;
+  }
+  .work-box-4 {
+    grid-column: 2/3;
+  }
+  .work-box-5 {
+    grid-column: 3/4;
+  }
+  .work-box-6 {
+    grid-column: 4/5;
+  }
+  .clients p {
+    margin: 2rem 0;
+    font-size: 1.8rem;
+  }
+  .carousel {
+    margin: 5rem 0;
+  }
+  .slider ul {
+    justify-content: space-evenly;
+  }
+  .nav-indicator {
+    width: 40%;
+    margin: 0 auto;
+  }
+  .contact span {
+    font-size: 5rem;
+  }
+  .contact p {
+    font-size: 1.8rem;
+  }
+  .contact form {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: 2rem;
+    width: 60%;
+    margin: 0 auto;
+    padding: 2rem 5rem;
+    height: 40rem;
+  }
+  .nameField {
+    margin-right: -19%;
+    width: 78%;
+  }
+  .mailField {
+    margin-left: -19%;
+    width: 78%;
+  }
+  .subjectField {
+    grid-column: 1/3;
+  }
+  .messageField {
+    grid-column: 1/3;
+  }
+  form button{
+      grid-column: 1/3;
+  }
+}
